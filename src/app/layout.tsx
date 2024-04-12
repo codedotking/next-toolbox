@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className=" mx-auto min-h-screen  w-[1024px] pt-4">
+        <div className=" mx-auto min-h-screen  w-[1024px]">
           <Header />
-          <main className="main">{children}</main>
+          <main className="main px-4 fixed top-24 w-full lg:static">{children}</main>
         </div>
       </body>
     </html>
