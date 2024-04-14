@@ -44,6 +44,7 @@ export default function Barcode() {
     email: "",
     message: "",
   });
+
   const barcodesRef = useRef<HTMLDivElement>(null);
   const handleGenerateBarcode = () => {
     const barcodes: String[] = formData.data
@@ -61,14 +62,12 @@ export default function Barcode() {
 
   const savePDF = async () => {
     if (barcodesRef.current && barcodesRef.current.innerHTML) {
-      var html = htmlToPdfmake(barcodesRef.current.innerHTML) as any;
-      console.log(html);
+      const content = htmlToPdfmake(barcodesRef.current.innerHTML);
       const pdf = pdfmake
         .createPdf({
-          content: html,
+          content: content,
         })
         .download("rrr.pdf");
-      console.log(pdf);
     }
   };
   return (

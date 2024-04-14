@@ -6,7 +6,7 @@ export default function Header() {
       className="fixed left-0  lg:py-8  top-0 justify-between   dark:from-inherit  bg-gradient-to-b 
     lg:static w-full flex lg:justify-between backdrop-blur-2xl 
     lg:dark:bg-zinc-800/30 dark:border-neutral-800 dark:bg-zinc-800/30 
-     z-10  max-w-5xl items-center  font-mono text-sm ">
+     z-10  lg:max-w-5xl items-center  font-mono text-sm ">
       <div className=" cursor-pointer">
         <a
           className="flex place-items-center gap-2 p-8 lg:p-0"
