@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/resizable";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Separator } from "@radix-ui/react-select";
 import { Nav } from "@/components/layout/nav";
+import Footer from "./footer";
 
 interface LayoutProps {
   defaultLayout: number[] | undefined;
@@ -19,7 +19,7 @@ interface LayoutProps {
 }
 
 export const RootLayout = ({
-  defaultLayout = [15, 85],
+  defaultLayout = [12, 88],
   defaultCollapsed = false,
   navCollapsedSize,
   children,
@@ -34,14 +34,15 @@ export const RootLayout = ({
   return (
     <ResizablePanelGroup
       direction="horizontal"
+      className=" h-screen"
       onLayout={(sizes: number[]) => {
         document.cookie = `react-resizable-panels:layout=${JSON.stringify(
           sizes
         )}`;
       }}>
       <ResizablePanel
-        minSize={23}
-        maxSize={15}
+        minSize={12}
+        maxSize={12}
         order={1}
         defaultSize={defaultLayout[0]}
         collapsible={true}
@@ -55,17 +56,15 @@ export const RootLayout = ({
           storeCollapsed(false);
         }}
         className={cn(
-          isCollapsed && "min-w-[50px] transition-all duration-300 ease-in-out"
+          isCollapsed && "min-w-[50px] transition-all duration-300 ease-in-out",
+          "flex flex-col  justify-between items-center py-4"
         )}>
-        <Separator />
-        <Nav
-          isCollapsed={isCollapsed}
-         
-        />
+        <Nav isCollapsed={isCollapsed} />
+        <Footer />
       </ResizablePanel>
       <ResizableHandle withHandle />
       <ResizablePanel defaultSize={defaultLayout[1]} order={2}>
-        <div className="flex min-h-screen w-full flex-col bg-muted/40">
+        <div className="bg-muted/40">
           <ScrollArea className="h-screen">
             <div className="p-4">{children}</div>
           </ScrollArea>
