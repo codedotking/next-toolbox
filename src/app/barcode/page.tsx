@@ -1,4 +1,4 @@
-import Barcode from "@/components/bardcode";
+import Barcode from "@/components/barcode";
 
 export const metadata = {
   title: "Barcode Generated",
