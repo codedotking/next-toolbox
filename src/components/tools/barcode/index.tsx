@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 import htmlToPdfmake from "html-to-pdfmake";
 import pdfmake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
-import { ScrollArea } from "../ui/scroll-area";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { ScrollArea } from "../../ui/scroll-area";
+import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
 import toast from "react-hot-toast";
 import BarcodeForm from "./barcode-form";
 

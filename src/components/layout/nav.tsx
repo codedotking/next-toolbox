@@ -1,7 +1,6 @@
 "use client";
-import { Home, BarcodeIcon } from "lucide-react";
 import Link from "next/link";
-import { LucideIcon } from "lucide-react";
+import { Home, LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -9,36 +8,21 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import useLocation from "@/hooks/useLocation";
 import { usePathname } from "next/navigation";
+import { links } from "../tools";
 
 interface NavProps {
   isCollapsed: boolean;
 }
 
-interface link {
+export interface link {
   title: string;
   label?: string;
   icon: LucideIcon;
   variant: "default" | "ghost";
   path: string;
+  desc: string | null;
 }
-const links: link[] = [
-  {
-    title: "首页",
-    label: "",
-    icon: Home,
-    variant: "default",
-    path: "/",
-  },
-  {
-    title: "条形码",
-    label: "",
-    icon: BarcodeIcon,
-    variant: "ghost",
-    path: "/barcode",
-  },
-];
 
 export function Nav({ isCollapsed }: NavProps) {
   const pathname = usePathname();
@@ -48,7 +32,17 @@ export function Nav({ isCollapsed }: NavProps) {
       data-collapsed={isCollapsed}
       className="group flex flex-col gap-4  flex-shrink-0 w-full">
       <nav className="grid gap-2 px-2 group-[[data-collapsed=true]]:justify-center ">
-        {links.map((link, index) =>
+        {[
+          {
+            title: "首页",
+            label: "",
+            icon: Home,
+            variant: "default",
+            path: "/",
+            desc: null,
+          },
+          ...links,
+        ].map((link, index) =>
           isCollapsed ? (
             <Tooltip key={index} delayDuration={0}>
               <TooltipTrigger asChild>

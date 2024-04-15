@@ -56,6 +56,9 @@ dependencies:
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
+  highlight.js:
+    specifier: ^11.9.0
+    version: 11.9.0
   html-to-pdfmake:
     specifier: ^2.5.6
     version: 2.5.6
@@ -68,6 +71,9 @@ dependencies:
   next:
     specifier: 14.1.4
     version: 14.1.4(react-dom@18.2.0)(react@18.2.0)
+  next-themes:
+    specifier: ^0.3.0
+    version: 0.3.0(react-dom@18.2.0)(react@18.2.0)
   pdfmake:
     specifier: ^0.2.10
     version: 0.2.10
@@ -2659,6 +2665,11 @@ packages:
     dependencies:
       function-bind: 1.1.2
 
+  /highlight.js@11.9.0:
+    resolution: {integrity: sha512-fJ7cW7fQGCYAkgv4CPfwFHrfd/cLS4Hau96JuJ+ZTOWhjnhoeN1ub1tFmALm/+lW5z4WCAuAV9bm05AP0mS6Gw==}
+    engines: {node: '>=12.0.0'}
+    dev: false
+
   /html-to-pdfmake@2.5.6:
     resolution: {integrity: sha512-qYkJLwp/8nHgky8qFu5AFYzxrPQFnh+x1HV7BATatiZekpz5GYqlSEiuLRAOgdIMh+BVHgClze18Y0zNcMrLeg==}
     dev: false
@@ -3101,6 +3112,16 @@ packages:
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
+
+  /next-themes@0.3.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18
+      react-dom: ^16.8 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /next@14.1.4(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-1WTaXeSrUwlz/XcnhGTY7+8eiaFvdet5z9u3V2jb+Ek1vFo0VhHKSAIJvDWfQpttWjnyw14kBeq28TPq7bTeEQ==}
