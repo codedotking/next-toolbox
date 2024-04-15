@@ -47,7 +47,7 @@ export function Nav({ isCollapsed }: NavProps) {
     <div
       data-collapsed={isCollapsed}
       className="group flex flex-col gap-4  flex-shrink-0 w-full">
-      <nav className="grid gap-1 px-2 group-[[data-collapsed=true]]:justify-center ">
+      <nav className="grid gap-2 px-2 group-[[data-collapsed=true]]:justify-center ">
         {links.map((link, index) =>
           isCollapsed ? (
             <Tooltip key={index} delayDuration={0}>
@@ -83,11 +83,11 @@ export function Nav({ isCollapsed }: NavProps) {
               className={cn(
                 buttonVariants({
                   variant: link.path == pathname ? "default" : "ghost",
-                  size: "sm",
+                  size: "lg",
                 }),
                 link.path == pathname &&
                   "dark:bg-muted dark:text-white dark:hover:bg-muted dark:hover:text-white",
-                "justify-start"
+                "justify-start  px-4"
               )}>
               <link.icon className="mr-2 h-4 w-4" />
               {link.title}
