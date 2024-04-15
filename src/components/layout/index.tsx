@@ -19,7 +19,7 @@ interface LayoutProps {
 }
 
 export const RootLayout = ({
-  defaultLayout = [12, 88],
+  defaultLayout = [15, 85],
   defaultCollapsed = false,
   navCollapsedSize,
   children,
@@ -41,8 +41,8 @@ export const RootLayout = ({
         )}`;
       }}>
       <ResizablePanel
-        minSize={12}
-        maxSize={12}
+        minSize={15}
+        maxSize={15}
         order={1}
         defaultSize={defaultLayout[0]}
         collapsible={true}
@@ -60,7 +60,7 @@ export const RootLayout = ({
           "flex flex-col  justify-between items-center py-4"
         )}>
         <Nav isCollapsed={isCollapsed} />
-        <Footer />
+        <Footer isCollapsed={isCollapsed}/>
       </ResizablePanel>
       <ResizableHandle withHandle />
       <ResizablePanel defaultSize={defaultLayout[1]} order={2}>

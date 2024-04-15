@@ -7,20 +7,25 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { links } from "@/components/tools";
 export default function Home() {
   return (
-    <div className="grid text-center lg:grid-cols-5 lg:text-left">
-      <Card className="rounded-sm shadow-none hover:shadow-md">
-        <CardHeader>
-          <CardTitle>条形码生成</CardTitle>
-          <CardDescription>支持批量生成条形码</CardDescription>
-        </CardHeader>
-        <CardFooter>
-          <Link href="/barcode" className=" w-full">
-            <Button className=" w-full text-white"> 使用 </Button>
-          </Link>
-        </CardFooter>
-      </Card>
+    <div className="grid text-center gap-4 2xl:grid-cols-5 lg:text-left">
+      {links.map((item) => {
+        return (
+          <Card key={item.path} className="rounded-sm shadow-none hover:shadow-md">
+            <CardHeader>
+              <CardTitle>{item.title}</CardTitle>
+              <CardDescription>{item.desc}</CardDescription>
+            </CardHeader>
+            <CardFooter>
+              <Link href={item.path} className=" w-full">
+                <Button className=" w-full text-white"> 使用 </Button>
+              </Link>
+            </CardFooter>
+          </Card>
+        );
+      })}
     </div>
   );
 }

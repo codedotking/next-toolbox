@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { RootLayout as Layout } from "@/components/layout";
 import { cookies } from "next/headers";
 import { Toaster } from "react-hot-toast";
+import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,15 +26,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <TooltipProvider delayDuration={0}>
-          <Layout
-            defaultLayout={defaultLayout as [number, number]}
-            defaultCollapsed={defaultCollapsed}
-            navCollapsedSize={3}>
-            {children}
-          </Layout>
-          <Toaster />
-        </TooltipProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange>
+          <TooltipProvider delayDuration={0}>
+            <Layout
+              defaultLayout={defaultLayout as [number, number]}
+              defaultCollapsed={defaultCollapsed}
+              navCollapsedSize={4}>
+              {children}
+            </Layout>
+            <Toaster />
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
