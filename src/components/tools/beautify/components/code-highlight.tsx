@@ -3,7 +3,7 @@ import hljs from "highlight.js";
 import { cn } from "@/lib/utils";
 import "highlight.js/styles/mono-blue.css";
 
-export const CodeBlock = ({
+const CodeBlock = ({
   code,
   language = "auto",
 }: {
@@ -26,3 +26,5 @@ export const CodeBlock = ({
     </pre>
   );
 };
+
+export { CodeBlock };
