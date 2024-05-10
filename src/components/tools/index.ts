@@ -1,5 +1,5 @@
 import { link } from "../layout/nav";
-import { BarcodeIcon, FileJson2Icon } from "lucide-react";
+import { BarcodeIcon, FileJson2Icon,SquirrelIcon } from "lucide-react";
 
 export const links: link[] = [
   {
@@ -17,5 +17,13 @@ export const links: link[] = [
     variant: "ghost",
     path: "/beautify/json",
     desc: "JSON 格式化以及美化",
+  },
+  {
+    title: "SQL 美化",
+    label: "",
+    icon: FileJson2Icon,
+    variant: "ghost",
+    path: "/beautify/sql",
+    desc: "SQL 格式化以及美化",
   },
 ];
