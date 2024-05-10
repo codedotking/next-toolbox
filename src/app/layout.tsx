@@ -7,6 +7,8 @@ import { cookies } from "next/headers";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -41,6 +43,7 @@ export default function RootLayout({
             </Layout>
             <Toaster />
             <Analytics />
+            <SpeedInsights/>
           </TooltipProvider>
         </ThemeProvider>
       </body>
