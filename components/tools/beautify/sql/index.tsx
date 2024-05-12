@@ -13,13 +13,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import toast from "react-hot-toast";
 import { format } from "sql-formatter";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@radix-ui/react-select";
+
 export default function BeautifyJSON() {
   const { value, onChange } = useInput("");
   const [formattedValue, setFormattedValue] = useState("");
@@ -34,8 +28,8 @@ export default function BeautifyJSON() {
   };
 
   return (
-    <div className=" grid gap-4 grid-cols-2">
-      <Card className="rounded-sm shadow-none col-span-1">
+    <div className=" grid gap-4 grid-cols-1 lg:grid-cols-2">
+      <Card className="rounded-sm shadow-none col-span-1 h-full">
         <CardHeader>
           <CardTitle>原始 SQL</CardTitle>
         </CardHeader>
@@ -54,16 +48,18 @@ export default function BeautifyJSON() {
         </CardFooter>
       </Card>
 
-      <Card className="rounded-sm shadow-none col-span-1">
-        <CardHeader>
-          <CardTitle>美化 SQL</CardTitle>
-        </CardHeader>
-        <CardContent>
-          {formattedValue.length > 0 && (
-            <CodeBlock code={formattedValue} language="json" />
-          )}
-        </CardContent>
-      </Card>
+      {formattedValue.length > 0 && (
+        <Card className="rounded-sm shadow-none col-span-1">
+          <CardHeader>
+            <CardTitle>美化 SQL</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {formattedValue.length > 0 && (
+              <CodeBlock code={formattedValue} language="json" />
+            )}
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }
