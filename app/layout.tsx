@@ -38,7 +38,7 @@ export default function RootLayout({
             <Layout
               defaultLayout={defaultLayout as [number, number]}
               defaultCollapsed={defaultCollapsed}
-              navCollapsedSize={4}>
+              navCollapsedSize={0}>
               {children}
             </Layout>
             <Toaster />
