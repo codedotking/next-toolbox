@@ -1,5 +1,5 @@
 import { link } from "../layout/nav";
-import { BarcodeIcon, FileJson2Icon,SquirrelIcon,CloudMoonRainIcon } from "lucide-react";
+import { BarcodeIcon, FileJson2Icon,SquirrelIcon,CloudMoonRainIcon, TimerIcon } from "lucide-react";
 
 export const links: link[] = [
   {
@@ -32,6 +32,14 @@ export const links: link[] = [
     icon: CloudMoonRainIcon,
     variant: "ghost",
     path: "/converter/color",
-    desc: "SQL 格式化以及美化",
+    desc: "颜色转换",
+  },
+   {
+    title: "时间转换",
+    label: "",
+    icon: TimerIcon,
+    variant: "ghost",
+    path: "/converter/datetime",
+    desc: "时间转换",
   },
 ];

@@ -41,7 +41,7 @@ export const RootLayout = ({
         )}`;
       }}>
       <ResizablePanel
-        minSize={15}
+        minSize={0}
         maxSize={15}
         order={1}
         defaultSize={defaultLayout[0]}
