@@ -1,5 +1,5 @@
 import { link } from "../layout/nav";
-import { BarcodeIcon, FileJson2Icon,SquirrelIcon,CloudMoonRainIcon, TimerIcon } from "lucide-react";
+import { BarcodeIcon, FileJson2Icon,SquirrelIcon,CloudMoonRainIcon, TimerIcon, LockIcon } from "lucide-react";
 
 export const links: link[] = [
   {
@@ -41,5 +41,13 @@ export const links: link[] = [
     variant: "ghost",
     path: "/converter/datetime",
     desc: "时间转换",
+  },
+  {
+    title: "AES 加密解密",
+    label: "",
+    icon: LockIcon,
+    variant: "ghost",
+    path: "/crypto/aes",
+    desc: "AES 加密解密",
   },
 ];
