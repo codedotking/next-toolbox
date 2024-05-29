@@ -41,6 +41,7 @@ export default function BarcodeForm({
         <Label htmlFor="lineCbackgroundolor">背景颜色</Label>
         <div className=" flex gap-2 items-center">
           <Input
+            autoComplete="off"
             value={formData.background}
             name="background"
             onChange={onChange}
@@ -86,6 +87,7 @@ export default function BarcodeForm({
           <Label htmlFor="lineColor">线条颜色</Label>
           <div className=" flex gap-2 items-center">
             <Input
+              autoComplete="off"
               value={formData.linkColor}
               name="linkColor"
               onChange={onChange}
@@ -126,6 +128,7 @@ export default function BarcodeForm({
             <div className="grid w-full gap-1.5 select-none">
               <Label htmlFor="text">文本内容</Label>
               <Input
+                autoComplete="off"
                 value={formData.text}
                 name="text"
                 onChange={onChange}
