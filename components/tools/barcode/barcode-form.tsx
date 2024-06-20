@@ -1,8 +1,8 @@
 "use client";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import ColorPicker from "../../color-picker";
-import { Input } from "../../ui/input";
+import ColorPicker from "@/components/color-picker";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -11,7 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
-import { Switch } from "../../ui/switch";
+import { Switch } from "@/components/ui/switch";
 
 export default function BarcodeForm({
   formData,
