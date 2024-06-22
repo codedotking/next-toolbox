@@ -31,7 +31,7 @@ export default function ColorConverter() {
             <PopoverTrigger className=" w-full">
               <div
                 className={cn(
-                  "w-full  border-2 border-gray-200 rounded-md  py-2  flex justify-center items-center cursor-pointer"
+                  "w-full  border-2  rounded-md  py-2  flex justify-center items-center cursor-pointer"
                 )}
                 style={{
                   backgroundColor: color,
